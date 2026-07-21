@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday 🎂</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="animations.css">
+<link rel="stylesheet" href="scrapbook.css">
+</head>
+<body>
+
+<canvas id="confetti-canvas" aria-hidden="true"></canvas>
+<canvas id="fireworks-canvas" aria-hidden="true"></canvas>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <div class="hero__balloons" id="balloons" aria-hidden="true"></div>
+
+  <svg class="hero__cake floaty" viewBox="0 0 120 120" aria-hidden="true">
+    <rect x="20" y="70" width="80" height="36" rx="6" fill="#FFE3EC"/>
+    <rect x="20" y="70" width="80" height="10" fill="#FF9EC7"/>
+    <rect x="30" y="50" width="60" height="24" rx="5" fill="#FFF3D6"/>
+    <rect x="30" y="50" width="60" height="8" fill="#FFC93C"/>
+    <rect x="52" y="26" width="6" height="26" fill="#FFC93C"/>
+    <path d="M55 14 Q60 22 55 26 Q50 22 55 14 Z" fill="#FF6B6B"/>
+    <rect x="70" y="30" width="6" height="22" fill="#FFC93C"/>
+    <path d="M73 18 Q78 26 73 30 Q68 26 73 18 Z" fill="#FF6B6B"/>
+  </svg>
+
+  <h1 class="hero__title display">Happy Birthday<span class="accent">!</span></h1>
+  <p class="hero__name" id="heroName">to the best person I know</p>
+
+  <div class="hero__scroll-cue"><span></span>scroll down</div>
+</section>
+
+<!-- ============ THEME / DISTANCE MESSAGE SECTION ============ -->
+<section class="section theme-section reveal" id="themeSection">
+  <svg class="theme-section__mascot floaty floaty--slow" viewBox="0 0 100 100" aria-hidden="true">
+    <circle cx="50" cy="55" r="38" fill="#4FC3F7"/>
+    <circle cx="50" cy="55" r="27" fill="#FFFFFF"/>
+    <circle cx="38" cy="50" r="4.5" fill="#1F2A44"/>
+    <circle cx="62" cy="50" r="4.5" fill="#1F2A44"/>
+    <circle cx="50" cy="58" r="6" fill="#FF6B6B"/>
+    <path d="M40 66 Q50 74 60 66" stroke="#1F2A44" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <rect x="30" y="66" width="40" height="16" rx="8" fill="#FFFFFF" stroke="#DDD" stroke-width="1"/>
+    <circle cx="50" cy="74" r="2.4" fill="#1F2A44"/>
+    <circle cx="16" cy="24" r="9" fill="#4FC3F7"/>
+    <circle cx="84" cy="24" r="9" fill="#4FC3F7"/>
+    <circle cx="16" cy="24" r="4.5" fill="#FF9EC7"/>
+    <circle cx="84" cy="24" r="4.5" fill="#FF9EC7"/>
+    <circle cx="50" cy="30" r="6" fill="#FFC93C"/>
+  </svg>
+
+  <h2 class="theme-section__title display">If I had a gadget-cat's pocket...</h2>
+  <p class="theme-section__msg" id="typedMessage"></p>
+
+  <div class="gadget-row">
+    <div class="gadget-card reveal reveal-pop">
+      <div class="gadget-card__icon">🚪</div>
+      <div class="gadget-card__label">Anywhere Door</div>
+      <div class="gadget-card__text">so the distance between us would just be one step.</div>
+    </div>
+    <div class="gadget-card reveal reveal-pop">
+      <div class="gadget-card__icon">⏰</div>
+      <div class="gadget-card__label">Time Kerchief</div>
+      <div class="gadget-card__text">to rewind to every day we laughed till it hurt.</div>
+    </div>
+    <div class="gadget-card reveal reveal-pop">
+      <div class="gadget-card__icon">🎈</div>
+      <div class="gadget-card__label">Little Balloon</div>
+      <div class="gadget-card__text">to float this whole page over to wherever you are.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PHOTO TRAIL ============ -->
+<section class="section trail-section" id="trailSection">
+  <div class="trail-section__intro reveal">
+    <h2 class="display">Four pins, four moments</h2>
+    <p>follow the trail — there's a note pinned to each one</p>
+  </div>
+
+  <div class="trail">
+    <div class="trail__path" aria-hidden="true"></div>
+
+    <!-- STOP 1 -->
+    <div class="pin-stop reveal reveal-left">
+      <div class="pin-stop__photo-wrap">
+        <div class="polaroid" style="--tilt:-5deg;">
+          <img src="images/photo2.jpeg" alt="Photo memory one" data-fallback="1">
+          <div class="pin"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="6" fill="#E4432A"/><rect x="10.5" y="14" width="3" height="9" fill="#B5301C"/></svg></div>
+          <p class="polaroid__caption">memory 01</p>
+        </div>
+      </div>
+      <div class="pin-stop__note">
+        <p class="pin-stop__eyebrow">pin 01</p>
+        <h3>Where it started</h3>
+        <p> Your smile has this quiet magic that can make even my hardest days feel lighter. Whenever I look at this photo, I'm reminded that happiness isn't a place it's simply being with you, even if it's just through a memory</p>
+      </div>
+    </div>
+
+    <div class="trail-arrow"><svg viewBox="0 0 46 60"><path d="M23 2 V46 M12 35 L23 50 L34 35"/></svg></div>
+
+    <!-- STOP 2 -->
+    <div class="pin-stop pin-stop--right reveal reveal-right">
+      <div class="pin-stop__photo-wrap">
+        <div class="polaroid" style="--tilt:4deg;">
+          <img src="images/photo1.jpeg" alt="Photo memory two" data-fallback="2">
+          <div class="pin"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="6" fill="#3FA9F5"/><rect x="10.5" y="14" width="3" height="9" fill="#1D6FB8"/></svg></div>
+          <p class="polaroid__caption">memory 02</p>
+        </div>
+      </div>
+      <div class="pin-stop__note">
+        <p class="pin-stop__eyebrow">pin 02</p>
+        <h3>The one that made me laugh for a week</h3>
+        <p>Two little hearts, living completely different stories, with no idea that one day fate would bring them together. Back then, we were just innocent kids chasing little dreams, never knowing that years later we'd become a beautiful chapter in each other's lives. Looking at this photo reminds me that some people are written into our story long before we ever meet them, and I'm so grateful that life eventually led me to you. ❤️
+</p>
+      </div>
+    </div>
+
+    <div class="trail-arrow"><svg viewBox="0 0 46 60"><path d="M23 2 V46 M12 35 L23 50 L34 35"/></svg></div>
+
+    <!-- STOP 3 -->
+    <div class="pin-stop reveal reveal-left">
+      <div class="pin-stop__photo-wrap">
+        <div class="polaroid" style="--tilt:-3deg;">
+          <img src="images/photo3.jpeg" alt="Photo memory three" data-fallback="3">
+          <div class="pin"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="6" fill="#FFC93C"/><rect x="10.5" y="14" width="3" height="9" fill="#C99A1F"/></svg></div>
+          <p class="polaroid__caption">memory 03</p>
+        </div>
+      </div>
+      <div class="pin-stop__note">
+        <p class="pin-stop__eyebrow">pin 03</p>
+        <h3>Proof we make our own "nearby"</h3>
+        <p>I don't know what the future has planned for us, but I know one thing for sure—every moment spent with you has become one of my favorite chapters. This picture is proof that some memories deserve to last forever.</p>
+      </div>
+    </div>
+
+    <div class="trail-arrow"><svg viewBox="0 0 46 60"><path d="M23 2 V46 M12 35 L23 50 L34 35"/></svg></div>
+
+    <!-- STOP 4 -->
+    <div class="pin-stop pin-stop--right reveal reveal-right">
+      <div class="pin-stop__photo-wrap">
+        <div class="polaroid" style="--tilt:5deg;">
+          <img src="images/photo4.jpeg" alt="Photo memory four" data-fallback="4">
+          <div class="pin"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="6" fill="#FF9EC7"/><rect x="10.5" y="14" width="3" height="9" fill="#D9749E"/></svg></div>
+          <p class="polaroid__caption">memory 04</p>
+        </div>
+      </div>
+      <div class="pin-stop__note">
+        <p class="pin-stop__eyebrow">pin 04</p>
+        <h3>The one I show everyone</h3>
+        <p> Whenever I miss you, I don't just look at your photos—I relive every laugh, every conversation, and every little moment that made me smile. Distance may separate us sometimes, but memories like this always bring you close to my heart.</p>
+        
+      </div>
+    </div>
+
+    <div class="trail-arrow"><svg viewBox="0 0 46 60"><path d="M23 2 V46 M12 35 L23 50 L34 35"/></svg></div>
+
+    <!-- STOP 5 -->
+    <div class="pin-stop reveal reveal-left">
+      <div class="pin-stop__photo-wrap">
+        <div class="polaroid" style="--tilt:-4deg;">
+          <img src="images/photo5.jpeg" alt="Photo memory five" data-fallback="5">
+          <div class="pin"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="6" fill="#E4432A"/><rect x="10.5" y="14" width="3" height="9" fill="#B5301C"/></svg></div>
+          <p class="polaroid__caption">memory 05</p>
+        </div>
+      </div>
+      <div class="pin-stop__note">
+        <p class="pin-stop__eyebrow">pin 05</p>
+        <h3>A regular Tuesday</h3>
+        <p>u smile, the way you laugh, and the way you simply exist makes my world brighter. This picture is one of the many reasons I'm thankful for you every sYou don't have to try to be special because you already are. The way yoingle day.</p>
+      </div>
+    </div>
+
+    <div class="trail-arrow"><svg viewBox="0 0 46 60"><path d="M23 2 V46 M12 35 L23 50 L34 35"/></svg></div>
+
+    <!-- STOP 6 -->
+    <div class="pin-stop pin-stop--right reveal reveal-right">
+      <div class="pin-stop__photo-wrap">
+        <div class="polaroid" style="--tilt:4deg;">
+          <img src="images/photo6.jpeg" alt="Photo memory six" data-fallback="6">
+          <div class="pin"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="6" fill="#3FA9F5"/><rect x="10.5" y="14" width="3" height="9" fill="#1D6FB8"/></svg></div>
+          <p class="polaroid__caption">memory 06</p>
+        </div>
+      </div>
+      <div class="pin-stop__note">
+        <p class="pin-stop__eyebrow">pin 06</p>
+        <h3>The chaos one</h3>
+        <p>Some memories slowly fade away, but this is one I never want to forget. Every time I see this picture, it reminds me how beautiful life can feel when it's shared with someone who means so much to you</p>
+      </div>
+    </div>
+
+    <div class="trail-arrow"><svg viewBox="0 0 46 60"><path d="M23 2 V46 M12 35 L23 50 L34 35"/></svg></div>
+
+    <!-- STOP 7 -->
+    <div class="pin-stop reveal reveal-left">
+      <div class="pin-stop__photo-wrap">
+        <div class="polaroid" style="--tilt:-5deg;">
+          <img src="images/photo7.jpeg" alt="Photo memory seven" data-fallback="7">
+          <div class="pin"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="6" fill="#FFC93C"/><rect x="10.5" y="14" width="3" height="9" fill="#C99A1F"/></svg></div>
+          <p class="polaroid__caption">memory 07</p>
+        </div>
+      </div>
+      <div class="pin-stop__note">
+        <p class="pin-stop__eyebrow">pin 07</p>
+        <h3>Somewhere in between</h3>
+        <p>Not the beginning, not recent — just one of those in-between moments that quietly became a favorite.</p>
+      </div>
+    </div>
+
+    <div class="trail-arrow"><svg viewBox="0 0 46 60"><path d="M23 2 V46 M12 35 L23 50 L34 35"/></svg></div>
+
+    <!-- STOP 8 -->
+    <div class="pin-stop pin-stop--right reveal reveal-right">
+      <div class="pin-stop__photo-wrap">
+        <div class="polaroid" style="--tilt:3deg;">
+          <img src="images/photo8.jpeg" alt="Photo memory eight" data-fallback="8">
+          <div class="pin"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="6" fill="#FF9EC7"/><rect x="10.5" y="14" width="3" height="9" fill="#D9749E"/></svg></div>
+          <p class="polaroid__caption">memory 08</p>
+        </div>
+      </div>
+      <div class="pin-stop__note">
+        <p class="pin-stop__eyebrow">pin 08</p>
+        <h3>Proof I'm not exaggerating</h3>
+        <p> I hope years from now we look back at this photo and smile, remembering not just how we looked, but how deeply we cared for each other. Some moments are temporary, but the emotions they leave behind can last forever</p>
+      </div>
+    </div>
+
+    <div class="trail-arrow"><svg viewBox="0 0 46 60"><path d="M23 2 V46 M12 35 L23 50 L34 35"/></svg></div>
+
+    <!-- STOP 9 -->
+    <div class="pin-stop reveal reveal-left">
+      <div class="pin-stop__photo-wrap">
+        <div class="polaroid" style="--tilt:-3deg;">
+          <img src="images/photo9.jpeg" alt="Photo memory nine" data-fallback="9">
+          <div class="pin"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="6" fill="#E4432A"/><rect x="10.5" y="14" width="3" height="9" fill="#B5301C"/></svg></div>
+          <p class="polaroid__caption">memory 09</p>
+        </div>
+      </div>
+      <div class="pin-stop__note">
+        <p class="pin-stop__eyebrow">pin 09</p>
+        <h3>Almost there</h3>
+        <p>If I had to choose one thing to thank life for, it would be bringing you into my world. These photos are more than memories—they're little pieces of my heart. No matter what happens, you'll always be one of the most beautiful chapters of my life</p>
+      </div>
+    </div>
+
+    <div class="trail-arrow"><svg viewBox="0 0 46 60"><path d="M23 2 V46 M12 35 L23 50 L34 35"/></svg></div>
+
+    <!-- STOP 10 -->
+    <div class="pin-stop pin-stop--right reveal reveal-right">
+      <div class="pin-stop__photo-wrap">
+        <div class="polaroid" style="--tilt:5deg;">
+          <img src="images/photo12.jpeg" alt="Photo memory ten" data-fallback="10">
+          <div class="pin"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="6" fill="#3FA9F5"/><rect x="10.5" y="14" width="3" height="9" fill="#1D6FB8"/></svg></div>
+          <p class="polaroid__caption">memory 10</p>
+        </div>
+      </div>
+      <div class="pin-stop__note">
+        <p class="pin-stop__eyebrow">pin 10</p>
+        <h3>To be continued</h3>
+        <p>The trail doesn't end at ten — it's just where the page runs out. There's a lot more to pin up, together, soon.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLOSING ============ -->
+<section class="closing reveal">
+  <svg class="closing__mascot floaty" viewBox="0 0 100 100" aria-hidden="true">
+    <circle cx="50" cy="55" r="38" fill="#4FC3F7"/>
+    <circle cx="50" cy="55" r="27" fill="#FFFFFF"/>
+    <circle cx="38" cy="48" r="4.5" fill="#1F2A44"/>
+    <circle cx="62" cy="48" r="4.5" fill="#1F2A44"/>
+    <path d="M34 46 Q38 41 42 46" stroke="#1F2A44" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M58 46 Q62 41 66 46" stroke="#1F2A44" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <circle cx="50" cy="58" r="6" fill="#FF6B6B"/>
+    <path d="M38 65 Q50 78 62 65" stroke="#1F2A44" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <circle cx="16" cy="24" r="9" fill="#4FC3F7"/>
+    <circle cx="84" cy="24" r="9" fill="#4FC3F7"/>
+    <circle cx="50" cy="30" r="6" fill="#FFC93C"/>
+  </svg>
+  <h2 class="display">Happy birthday, my favorite person.</h2>
+  <p>However far the map says we are, you're the first door I open in my head every single day. Here's to closing that distance, one visit — and one silly page like this — at a time.</p>
+  <p class="closing__signature heartbeat">— always yours</p>
+  <button class="replay-btn wobble-hover" id="replayBtn">Replay the magic ✨</button>
+</section>
+
+<button class="music-toggle" id="musicToggle" aria-label="Toggle background music" title="Play birthday music">🎵</button>
+<audio id="bgMusic" src="audio/iris.mp3.mp3" loop preload="none"></audio>
+
+<script src="confetti.js"></script>
+<script src="fireworks.js"></script>
+<script src="typing.js"></script>
+<script src="scrapbook.js"></script>
+<script src="music.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Little Envelope For You</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="envelope.css">
+</head>
+<body>
+
+<main class="gate">
+  <div class="gate__clouds" aria-hidden="true">
+    <span></span><span></span><span></span><span></span>
+  </div>
+
+  <h1 class="gate__title">
+    You've got mail 💌
+    <small>open it, and tell it who you are</small>
+  </h1>
+
+  <div class="envelope-wrap">
+    <div class="envelope" id="envelope">
+      <div class="envelope__body">
+        <div class="envelope__pocket-left"></div>
+        <div class="envelope__pocket-right"></div>
+      </div>
+
+      <div class="envelope__letter">
+        <div class="envelope__idle">
+          <p class="envelope__hint">Tap the envelope to open it</p>
+        </div>
+
+        <form class="password-form" id="passwordForm" autocomplete="off">
+          <p class="envelope__hint">Who's opening this?</p>
+          <p class="envelope__prompt">Type your name to unlock it</p>
+          <input
+            type="text"
+            id="passwordInput"
+            placeholder="your name..."
+            aria-label="Enter your name to unlock"
+          >
+          <button type="submit">Unlock</button>
+          <p class="password-error" id="passwordError" role="alert"></p>
+        </form>
+      </div>
+
+      <div class="envelope__seal" aria-hidden="true">💛</div>
+      <div class="envelope__flap"></div>
+    </div>
+  </div>
+
+  <!-- Gadget-cat buddy peeking in, original mascot (not a reproduction of any copyrighted character) -->
+  <svg class="gate__buddy" viewBox="0 0 100 100" aria-hidden="true">
+    <circle cx="50" cy="55" r="38" fill="#4FC3F7"/>
+    <circle cx="50" cy="55" r="27" fill="#FFFFFF"/>
+    <circle cx="38" cy="50" r="4.5" fill="#1F2A44"/>
+    <circle cx="62" cy="50" r="4.5" fill="#1F2A44"/>
+    <circle cx="50" cy="58" r="6" fill="#FF6B6B"/>
+    <path d="M40 66 Q50 74 60 66" stroke="#1F2A44" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <rect x="30" y="66" width="40" height="16" rx="8" fill="#FFFFFF" stroke="#DDD" stroke-width="1"/>
+    <circle cx="50" cy="74" r="2.4" fill="#1F2A44"/>
+    <circle cx="16" cy="24" r="9" fill="#4FC3F7"/>
+    <circle cx="84" cy="24" r="9" fill="#4FC3F7"/>
+    <circle cx="16" cy="24" r="4.5" fill="#FF9EC7"/>
+    <circle cx="84" cy="24" r="4.5" fill="#FF9EC7"/>
+    <circle cx="50" cy="30" r="6" fill="#FFC93C"/>
+  </svg>
+
+  <p style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,0.7);font-size:11px;z-index:4;">
+    psst — the password is a name close to my heart
+  </p>
+</main>
+
+<div class="gate-transition" id="gateTransition">Opening your surprise...</div>
+
+<script src="password.js"></script>
+</body>
+</html>
